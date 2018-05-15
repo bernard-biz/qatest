@@ -1,14 +1,13 @@
 require 'selenium-webdriver'
 require_relative '..\page\main_page'
 
-hostname = ENV['SELENIUM-HUB'] || "localhost"
+hostname = ENV['SELENIUM-HOSTNAME'] || "localhost"
 port = ENV['SELENIUM-PORT'] || "4444"
 browser = ENV['SELENIUM-BROWSER'] || "chrome"
 
 describe "Registration" do 
    before(:all) do 
 	  @driver = Selenium::WebDriver.for :remote, url: "http://"+hostname+":"+port+"/wd/hub", desired_capabilities: :"#{browser}"
-	  @driver.manage.window.maximize
    end 
    
    before(:each) do 
