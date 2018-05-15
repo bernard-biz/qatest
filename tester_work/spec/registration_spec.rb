@@ -1,5 +1,5 @@
 require 'selenium-webdriver'
-require_relative '..\page\main_page'
+require_relative '../page/main_page'
 
 hostname = ENV['SELENIUM-HOSTNAME'] || "localhost"
 port = ENV['SELENIUM-PORT'] || "4444"
